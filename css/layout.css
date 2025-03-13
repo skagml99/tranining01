@@ -1,0 +1,75 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 80px 0;
+}
+
+.default h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.default_btn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    height: 72px;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0 40px;
+    border-radius: 36px;
+
+    overflow: hidden;
+}
+
+.default_btn.c {
+    height: 56px;
+    border: 2px solid #09847f;
+    color: #09847f;
+}
+
+.default_btn:hover.c {
+    color: #fff;
+}
+
+.default_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: -1;
+
+    height: 0;
+    background: #09847f;
+
+    transition: 0.4s;
+}
+
+.default_btn:hover::before {
+    height: 100%;
+    top: auto;
+    bottom: 0;
+}
+
+.default_btn::after {
+    content: "";
+    background: url(../images/arrow-right.svg)no-repeat center center/16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 18px;
+}
+
+
+.default_btn.c::after {
+    background: url(../images/arrow-right_c.svg)no-repeat center center/16px;
+}
+
+.default_btn:hover.c::after {
+    background: url(../images/arrow-right.svg)no-repeat center center/16px;
+}
